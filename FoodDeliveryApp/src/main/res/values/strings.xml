@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">FoodDeliveryApp</string>
+    <string name="Front_page_app_name">Foodator</string>
+    <string name="food_delivery_app">Food Delivery App</string>
+    <string name="get_started">Get Started</string>
+    <string name="user_name">Hi, Robiul</string>
+    <string name="order_eat"><![CDATA[Order & Eat]]></string>
+    <string name="offer_date">May 2 - June 10</string>
+    <string name="free_delivery">Free Delivery</string>
+    <string name="category">Category</string>
+    <string name="popular">Popular</string>
+    <string name="home_textView">Home</string>
+    <string name="profile_textView">Profile</string>
+</resources>
