@@ -5,4 +5,6 @@ public class Constants {
 
     public static String KEY_CARD_LIST = "CardList";
     public static String KEY_FOOD_ITEM = "FoodItem";
+
+    public static String KEY_DUMMY = "DummyKey";
 }
