@@ -32,7 +32,7 @@ import android.util.Log;
 
 import androidx.preference.PreferenceManager;
 
-import com.example.fooddeliveryapp.domain.FoodDomain;
+import com.example.fooddeliveryapp.Domain.FoodDomain;
 import com.google.gson.Gson;
 
 import java.io.File;

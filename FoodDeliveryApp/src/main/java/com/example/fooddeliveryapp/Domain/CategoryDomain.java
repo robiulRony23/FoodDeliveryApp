@@ -1,6 +1,4 @@
-package com.example.fooddeliveryapp.domain;
-
-import android.graphics.drawable.Drawable;
+package com.example.fooddeliveryapp.Domain;
 
 public class CategoryDomain {
     String title;

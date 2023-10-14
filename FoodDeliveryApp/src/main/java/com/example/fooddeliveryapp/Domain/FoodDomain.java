@@ -1,4 +1,4 @@
-package com.example.fooddeliveryapp.domain;
+package com.example.fooddeliveryapp.Domain;
 
 import java.io.Serializable;
 

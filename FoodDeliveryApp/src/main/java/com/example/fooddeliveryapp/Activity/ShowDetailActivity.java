@@ -1,7 +1,8 @@
-package com.example.fooddeliveryapp.activity;
+package com.example.fooddeliveryapp.Activity;
 
 import static com.example.fooddeliveryapp.Utils.Constants.KEY_FOOD_ITEM;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -10,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.fooddeliveryapp.Helper.ManagementCart;
 import com.example.fooddeliveryapp.R;
-import com.example.fooddeliveryapp.domain.FoodDomain;
+import com.example.fooddeliveryapp.Domain.FoodDomain;
 
 public class ShowDetailActivity extends AppCompatActivity {
     private TextView addToCartBtn, textTitle, priceTxt, descriptionTxt, orderAmountTxt;
@@ -53,6 +54,7 @@ public class ShowDetailActivity extends AppCompatActivity {
         addToCartBtn.setOnClickListener(view -> {
             foodItem.setNumberInCart(numberOfOrder);
             managementCart.insetFood(foodItem);
+            startActivity(new Intent(this, CartListActivity.class));
         });
     }
 

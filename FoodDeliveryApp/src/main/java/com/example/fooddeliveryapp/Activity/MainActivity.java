@@ -1,11 +1,13 @@
-package com.example.fooddeliveryapp.activity;
+package com.example.fooddeliveryapp.Activity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -14,13 +16,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.fooddeliveryapp.Adapter.CategoryAdapter;
 import com.example.fooddeliveryapp.Adapter.PopularFoodAdapter;
 import com.example.fooddeliveryapp.R;
-import com.example.fooddeliveryapp.domain.CategoryDomain;
-import com.example.fooddeliveryapp.domain.FoodDomain;
+import com.example.fooddeliveryapp.Domain.CategoryDomain;
+import com.example.fooddeliveryapp.Domain.FoodDomain;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-
+    private static final String TAG = "MainActivity";
     private RecyclerView.Adapter categoryAdapter;
     private RecyclerView.Adapter foodAdapter;
     private RecyclerView recyclerViewCategoryList;
@@ -35,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         searchItemInit();
         recyclerViewCategory();
         recyclerViewPopularFood();
+        bottomNavigation();
     }
 
     private void searchItemInit() {
@@ -42,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         searchItem.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
-                Log.d("rony", "focusUpdated: " + hasFocus);
+                Log.d(TAG, "focusUpdated: " + hasFocus);
                 if (!hasFocus) {
                     hideKeyboard(v);
                 }
@@ -72,9 +76,9 @@ public class MainActivity extends AppCompatActivity {
         recyclerViewPopularFoodList.setLayoutManager(linearLayoutManager);
 
         ArrayList<FoodDomain> popularFoodItem = new ArrayList<>();
-        popularFoodItem.add(new FoodDomain("Pepperoni Pizza", R.drawable.pop_1, "cheese, fresh oregano pizza, dish of Italian origin consisting of a flattened disk of bread dough topped with some combination of olive oil, oregano, tomato, olives", 599.0, 5));
-        popularFoodItem.add(new FoodDomain("Cheese Burger", R.drawable.pop_2, "The Beef Burger, Juicy, big, loaded with toppings of my choice.High quality beef medium to well with cheese and bacon on a multigrain bun. cheese, special sauce", 350.0, 10));
-        popularFoodItem.add(new FoodDomain("Vegetable Pizza", R.drawable.pop_3, "vegetable with chilly sauce, White pizza with garlic infused olive oil, goat cheese, fresh mozzarella fior di latte, prosciutto fired off then topped with arugula and shaved parmesan", 799.0, 3));
+        popularFoodItem.add(new FoodDomain("Pepperoni Pizza", R.drawable.pop_1, "cheese, fresh oregano pizza, dish of Italian origin consisting of a flattened disk of bread dough topped with some combination of olive oil, oregano, tomato, olives", 10.0, 5));
+        popularFoodItem.add(new FoodDomain("Cheese Burger", R.drawable.pop_2, "The Beef Burger, Juicy, big, loaded with toppings of my choice.High quality beef medium to well with cheese and bacon on a multigrain bun. cheese, special sauce", 7.0, 10));
+        popularFoodItem.add(new FoodDomain("Vegetable Pizza", R.drawable.pop_3, "vegetable with chilly sauce, White pizza with garlic infused olive oil, goat cheese, fresh mozzarella fior di latte, prosciutto fired off then topped with arugula and shaved parmesan", 15.5, 3));
 
 
         foodAdapter = new PopularFoodAdapter(popularFoodItem);
@@ -84,5 +88,13 @@ public class MainActivity extends AppCompatActivity {
     public void hideKeyboard(View view) {
         InputMethodManager inputMethodManager =(InputMethodManager)getSystemService(Activity.INPUT_METHOD_SERVICE);
         inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(), 0);
+    }
+
+    private void bottomNavigation() {
+        FloatingActionButton floatingActionButton = findViewById(R.id.cartBtn);
+        LinearLayout homeBtn = findViewById(R.id.home_button);
+        floatingActionButton.setOnClickListener((view) -> {
+            startActivity(new Intent(this, CartListActivity.class));
+        });
     }
 }

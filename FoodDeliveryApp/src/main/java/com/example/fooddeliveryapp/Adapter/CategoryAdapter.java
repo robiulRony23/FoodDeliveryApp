@@ -12,7 +12,7 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.fooddeliveryapp.R;
-import com.example.fooddeliveryapp.domain.CategoryDomain;
+import com.example.fooddeliveryapp.Domain.CategoryDomain;
 
 import java.util.ArrayList;
 

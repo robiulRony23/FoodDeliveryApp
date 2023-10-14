@@ -14,8 +14,8 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.fooddeliveryapp.R;
-import com.example.fooddeliveryapp.activity.ShowDetailActivity;
-import com.example.fooddeliveryapp.domain.FoodDomain;
+import com.example.fooddeliveryapp.Activity.ShowDetailActivity;
+import com.example.fooddeliveryapp.Domain.FoodDomain;
 
 import java.util.ArrayList;
 

@@ -11,4 +11,6 @@
     <string name="popular">Popular</string>
     <string name="home_textView">Home</string>
     <string name="profile_textView">Profile</string>
+    <string name="support">Support</string>
+    <string name="settings">Settings</string>
 </resources>

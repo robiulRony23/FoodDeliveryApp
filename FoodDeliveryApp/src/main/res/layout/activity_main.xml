@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.MainActivity">
+    tools:context=".Activity.MainActivity">
 
     <ScrollView
         android:id="@+id/scrollView"
@@ -290,7 +290,7 @@
                         android:id="@+id/textView15"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/home_textView"
+                        android:text=""
                         android:textAlignment="center"
                         android:textColor="#676767"
                         android:textSize="12sp" />
@@ -314,7 +314,7 @@
                         android:id="@+id/textView18"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/home_textView"
+                        android:text="@string/support"
                         android:textAlignment="center"
                         android:textColor="#676767"
                         android:textSize="12sp" />
@@ -338,7 +338,7 @@
                         android:id="@+id/textView19"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/home_textView"
+                        android:text="@string/settings"
                         android:textAlignment="center"
                         android:textColor="#676767"
                         android:textSize="12sp" />
@@ -348,6 +348,7 @@
         </com.google.android.material.bottomappbar.BottomAppBar>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/cartBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="#ff5e00"
@@ -356,7 +357,7 @@
             app:backgroundTint="#ff5e00"
             app:layout_anchor="@id/bottom_app_bar"
             app:maxImageSize="30dp"
-            app:tint="#ffffff">
+            app:tint="#000000">
 
         </com.google.android.material.floatingactionbutton.FloatingActionButton>
 

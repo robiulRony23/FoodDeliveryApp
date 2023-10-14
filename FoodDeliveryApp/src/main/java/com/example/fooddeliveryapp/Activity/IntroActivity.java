@@ -1,11 +1,10 @@
-package com.example.fooddeliveryapp.activity;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
+package com.example.fooddeliveryapp.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.example.fooddeliveryapp.R;
 
