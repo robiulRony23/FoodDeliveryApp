@@ -46,6 +46,10 @@ public class ManagementCart {
         return tinyDB.getListObject(KEY_CARD_LIST);
     }
 
+    public void clearList() {
+        tinyDB.clear();
+    }
+
     public void plusFoodItem(ArrayList<FoodDomain> foodList, int position, ItemsNumberChangeListener itemsNumberChangeListener) {
         foodList.get(position).setNumberInCart(foodList.get(position).getNumberInCart() + 1);
         tinyDB.putListObject(KEY_CARD_LIST, foodList);

@@ -76,9 +76,9 @@ public class MainActivity extends AppCompatActivity {
         recyclerViewPopularFoodList.setLayoutManager(linearLayoutManager);
 
         ArrayList<FoodDomain> popularFoodItem = new ArrayList<>();
-        popularFoodItem.add(new FoodDomain("Pepperoni Pizza", R.drawable.pop_1, "cheese, fresh oregano pizza, dish of Italian origin consisting of a flattened disk of bread dough topped with some combination of olive oil, oregano, tomato, olives", 10.0, 5));
-        popularFoodItem.add(new FoodDomain("Cheese Burger", R.drawable.pop_2, "The Beef Burger, Juicy, big, loaded with toppings of my choice.High quality beef medium to well with cheese and bacon on a multigrain bun. cheese, special sauce", 7.0, 10));
-        popularFoodItem.add(new FoodDomain("Vegetable Pizza", R.drawable.pop_3, "vegetable with chilly sauce, White pizza with garlic infused olive oil, goat cheese, fresh mozzarella fior di latte, prosciutto fired off then topped with arugula and shaved parmesan", 15.5, 3));
+        popularFoodItem.add(new FoodDomain("Pepperoni Pizza", R.drawable.pop_1, "cheese, fresh oregano pizza, dish of Italian origin consisting of a flattened disk of bread dough topped with some combination of olive oil, oregano, tomato, olives", 500.0, 5));
+        popularFoodItem.add(new FoodDomain("Cheese Burger", R.drawable.pop_2, "The Beef Burger, Juicy, big, loaded with toppings of my choice.High quality beef medium to well with cheese and bacon on a multigrain bun. cheese, special sauce", 250.0, 10));
+        popularFoodItem.add(new FoodDomain("Vegetable Pizza", R.drawable.pop_3, "vegetable with chilly sauce, White pizza with garlic infused olive oil, goat cheese, fresh mozzarella fior di latte, prosciutto fired off then topped with arugula and shaved parmesan", 750.0, 3));
 
 
         foodAdapter = new PopularFoodAdapter(popularFoodItem);

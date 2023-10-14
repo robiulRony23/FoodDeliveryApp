@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -27,7 +28,7 @@ public class CartListActivity extends AppCompatActivity {
     private RecyclerView recyclerViewList;
     private ManagementCart managementCart;
     private ScrollView scrollView;
-    private TextView itemCostTxt, taxTxt, deliverCostTxt, totalCostTxt, emptyCartTxt;
+    private TextView itemCostTxt, taxTxt, deliverCostTxt, totalCostTxt, emptyCartTxt, checkoutBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +59,7 @@ public class CartListActivity extends AppCompatActivity {
         taxTxt =findViewById(R.id.taxCostTxt);
         totalCostTxt =findViewById(R.id.totalCostTxt);
         emptyCartTxt =findViewById(R.id.emptyCartTxt);
+        checkoutBtn = findViewById(R.id.checkoutBtn);
     }
 
     private void initList() {
@@ -73,6 +75,12 @@ public class CartListActivity extends AppCompatActivity {
         });
 
         recyclerViewList.setAdapter(adapter);
+        checkoutBtn.setOnClickListener((view) -> {
+            managementCart.clearList();
+            Toast.makeText(this, "Enjoy Your Food", Toast.LENGTH_LONG).show();
+            startActivity(new Intent(this, MainActivity.class));
+        });
+
         checkEmptyCart();
     }
 

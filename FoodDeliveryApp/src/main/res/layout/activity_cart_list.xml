@@ -160,7 +160,7 @@
                 android:layout_margin="16dp"
                 android:background="@drawable/orange_button"
                 android:gravity="center"
-                android:text="Checkout"
+                android:text="Confirm Order"
                 android:textColor="#ffffff"
                 android:textSize="25dp"
                 android:textStyle="bold" />

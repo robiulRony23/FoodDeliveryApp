@@ -39,7 +39,7 @@ public class PopularFoodAdapter extends RecyclerView.Adapter<PopularFoodAdapter.
         holder.title.setText(foodDomains.get(position).getTitle());
         holder.image.setImageDrawable(ContextCompat.getDrawable(holder.itemView.getContext(), foodDomains.get(position).getImageResId()));
         holder.price.setText(foodDomains.get(position).getPrice().toString());
-        holder.addToCartBtn.setOnClickListener(view -> {
+        holder.itemView.setOnClickListener(view -> {
             Intent intent = new Intent(holder.itemView.getContext(), ShowDetailActivity.class);
             intent.putExtra(KEY_FOOD_ITEM, foodDomains.get(position));
             holder.itemView.getContext().startActivity(intent);
