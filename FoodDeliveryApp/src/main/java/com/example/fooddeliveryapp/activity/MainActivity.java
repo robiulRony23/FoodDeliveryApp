@@ -1,16 +1,15 @@
 package com.example.fooddeliveryapp.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.fooddeliveryapp.Adapter.CategoryAdapter;
 import com.example.fooddeliveryapp.Adapter.PopularFoodAdapter;
@@ -73,9 +72,9 @@ public class MainActivity extends AppCompatActivity {
         recyclerViewPopularFoodList.setLayoutManager(linearLayoutManager);
 
         ArrayList<FoodDomain> popularFoodItem = new ArrayList<>();
-        popularFoodItem.add(new FoodDomain("Pepperoni Pizza", R.drawable.pop_1, "cheese, fresh oregano", 599.0, 5));
-        popularFoodItem.add(new FoodDomain("Cheese Burger", R.drawable.pop_2, "cheese, special sauce", 350.0, 10));
-        popularFoodItem.add(new FoodDomain("Vegetable Pizza", R.drawable.pop_3, "vegetable with chilly sauce", 799.0, 3));
+        popularFoodItem.add(new FoodDomain("Pepperoni Pizza", R.drawable.pop_1, "cheese, fresh oregano pizza, dish of Italian origin consisting of a flattened disk of bread dough topped with some combination of olive oil, oregano, tomato, olives", 599.0, 5));
+        popularFoodItem.add(new FoodDomain("Cheese Burger", R.drawable.pop_2, "The Beef Burger, Juicy, big, loaded with toppings of my choice.High quality beef medium to well with cheese and bacon on a multigrain bun. cheese, special sauce", 350.0, 10));
+        popularFoodItem.add(new FoodDomain("Vegetable Pizza", R.drawable.pop_3, "vegetable with chilly sauce, White pizza with garlic infused olive oil, goat cheese, fresh mozzarella fior di latte, prosciutto fired off then topped with arugula and shaved parmesan", 799.0, 3));
 
 
         foodAdapter = new PopularFoodAdapter(popularFoodItem);

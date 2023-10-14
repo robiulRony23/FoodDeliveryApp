@@ -1,18 +1,20 @@
 package com.example.fooddeliveryapp.domain;
 
-public class FoodDomain {
+import java.io.Serializable;
+
+public class FoodDomain implements Serializable {
     String title;
-    int image;
+    int imageResId;
     String description;
     Double price;
-    int stockCount;
+    int numberInCart;
 
-    public FoodDomain(String title, int image, String description, Double price, int stockCount) {
+    public FoodDomain(String title, int imageResId, String description, Double price, int numberInCart) {
         this.title = title;
-        this.image = image;
+        this.imageResId = imageResId;
         this.description = description;
         this.price = price;
-        this.stockCount = stockCount;
+        this.numberInCart = numberInCart;
     }
 
     public String getTitle() {
@@ -23,12 +25,12 @@ public class FoodDomain {
         this.title = title;
     }
 
-    public int getImage() {
-        return image;
+    public int getImageResId() {
+        return imageResId;
     }
 
-    public void setImage(int image) {
-        this.image = image;
+    public void setImageResId(int imageResId) {
+        this.imageResId = imageResId;
     }
 
     public String getDescription() {
@@ -47,12 +49,12 @@ public class FoodDomain {
         this.price = price;
     }
 
-    public int getStockCount() {
-        return stockCount;
+    public int getNumberInCart() {
+        return numberInCart;
     }
 
-    public void setStockCount(int stockCount) {
-        this.stockCount = stockCount;
+    public void setNumberInCart(int numberInCart) {
+        this.numberInCart = numberInCart;
     }
 
 }
