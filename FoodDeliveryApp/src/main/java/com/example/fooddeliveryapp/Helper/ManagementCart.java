@@ -54,7 +54,7 @@ public class ManagementCart {
 
     public void minusFoodItem(ArrayList<FoodDomain> foodList, int position, ItemsNumberChangeListener itemsNumberChangeListener) {
         int numberOfItem = foodList.get(position).getNumberInCart();
-        if (numberOfItem == 1) {
+        if (numberOfItem <= 1) {
             foodList.remove(position);
         } else {
             foodList.get(position).setNumberInCart(numberOfItem - 1);

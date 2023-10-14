@@ -17,7 +17,7 @@ public class ShowDetailActivity extends AppCompatActivity {
     private TextView addToCartBtn, textTitle, priceTxt, descriptionTxt, orderAmountTxt;
     private ImageView plusBtn, minusBtn, foodImage;
     private FoodDomain foodItem;
-    private int numberOfOrder;
+    private int numberOfOrder = 1;
     private ManagementCart managementCart;
 
     @Override
